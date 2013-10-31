@@ -1,7 +1,12 @@
 <div class="container">
-  <h1>Welcome to my super awesome website!</h1>
+  <h1>1999, or: The Best Year The World Has Ever Known</h1>
   <p>Hello, world!</p>
 
+  <ul class="posts">
+    <% @posts.each do |p| %>
+      <li><a href="/posts/<%=p.id%>"><%=p.title%></a></li>
+    <% end %>
+  </ul>
 
 
 </div>

@@ -1,15 +1,20 @@
 ### GET ###
 
+# show all posts
 get '/posts' do 
-  # show all posts
+  erb :index
 end
 
 get '/posts/new' do
   # get post creation form
+  erb :new
 end
 
+# show particular post
 get '/posts/:id' do
-  # show particular post
+  @post = Post.find(params[:id])
+  @tags = @post.tags 
+  erb :post
 end
 
 get '/posts/:id/edit' do
@@ -30,5 +35,3 @@ end
 post 'posts/:id/delete' do
   # delete post
 end
-
-
