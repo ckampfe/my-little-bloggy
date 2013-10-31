@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @post.title %></h1>
+  <div><%= @post.body %></div>
+  <div>
+    <ul class="cloud">
+    <% @tags.each do |t| %>
+      <li><a href=""><%= t.name %></a></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
