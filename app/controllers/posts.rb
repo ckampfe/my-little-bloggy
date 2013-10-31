@@ -1,7 +1,7 @@
 ### GET ###
 
 # show all posts
-get '/posts' do 
+get '/posts' do
   erb :index
 end
 
@@ -13,14 +13,13 @@ end
 # show particular post
 get '/posts/:id' do
   @post = Post.find(params[:id])
-  @tags = @post.tags 
+  @tags = @post.tags
   erb :post
 end
 
 get '/posts/:id/edit' do
   # edit post
 end
-  
 
 ### POST ###
 
@@ -30,7 +29,7 @@ end
 
 post '/posts/:id/edit' do
   # submit post edit
-end 
+end
 
 post 'posts/:id/delete' do
   # delete post
