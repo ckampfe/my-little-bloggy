@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Edit</h1>
+  <div>
+    <form action="/posts/<%= @post.id %>/edit" method="post" id="post">
+      <input id="title" name="title" type="text" value="<%= @post.title %>">
+      <textarea id="body" rows="9" cols="50" name="body"><%= @post.body %></textarea>
+      <% @tags.each do |t| %>
+
+        <input id="tags" type="text" name="tags" value="<% t %>">
+
+      <% end %>
+      <input type="submit" value="Post">
+    </form>
+  </div>
+</div>
