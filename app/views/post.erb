@@ -4,7 +4,7 @@
   <div>
     <ul class="cloud">
     <% @tags.each do |t| %>
-      <li><a href=""><%= t.name %></a></li>
+      <li><a href="/tag/<%= t.name %>"><%= t.name %></a></li>
     <% end %>
     </ul>
     <a href="/posts/<%= @post.id %>/edit">Edit this post</a>
