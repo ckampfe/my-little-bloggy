@@ -10,3 +10,7 @@ A little Sinatra blog.
 3. rake db:migrate
 4. rake db:seed (if you want some Lorem data)
 
+## Todo:
+0. Style/CSS
+1. Delete/destory
+2. AJAX editing
