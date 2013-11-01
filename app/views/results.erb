@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Posts with the tag "<%= @tag %>"</h2>
+  <ul class="posts">
+    <% @posts.reverse.each do |p| %>
+      <li><a href="/posts/<%=p.id%>"><%=p.title%></a></li>
+    <% end %>
+  </ul>
+</div>
