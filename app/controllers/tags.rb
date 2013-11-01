@@ -1,3 +1,5 @@
 get '/tag/:name' do
-  # show all posts associate with a particular tag
+  @tag = params[:name]
+  @posts = Tag.find_by_name(params[:name]).posts
+  erb :results
 end
